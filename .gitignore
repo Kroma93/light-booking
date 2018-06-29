@@ -11,3 +11,5 @@
 \.idea/encodings\.xml
 
 \.idea/
+
+target/
