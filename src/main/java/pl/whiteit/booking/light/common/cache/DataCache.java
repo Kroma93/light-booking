@@ -22,7 +22,7 @@ public abstract class DataCache<T extends BaseModel> {
     @Inject
     private JsonDataFactory jsonDataFactory;
 
-    private Cache<Long, T> cache;
+    protected Cache<Long, T> cache;
 
     private List<T> dataFromResources;
 
@@ -32,11 +32,15 @@ public abstract class DataCache<T extends BaseModel> {
 
 
     @PostConstruct
-    public void create() throws Exception {
+    public void create() {
         System.out.println("INIT CACHE " + getCacheName());
 
         initializeCache();
-        loadDataFromResources();
+        try {
+            loadDataFromResources();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         System.out.println("END CACHE " + getCacheName());
     }
@@ -46,6 +50,7 @@ public abstract class DataCache<T extends BaseModel> {
             @Override
             public T load(Long key) throws NullPointerException {
                 Optional<T> dataPossible = dataFromResources.stream().filter(room -> room.id.equals(key)).findFirst();
+
                 return dataPossible.orElseThrow(() -> new NullPointerException("Not found by this ID ---> " + key + " IN CACHE " + getCacheName()));
             }
         });
@@ -90,10 +95,13 @@ public abstract class DataCache<T extends BaseModel> {
         return new ArrayList<>(cache.asMap().values());
     }
 
+    public T get(Long key){
+       return cache.getIfPresent(key);
+    }
+
     protected String getCacheName() {
         Resources annotation = getClass().getAnnotation(Resources.class);
         return annotation.value().name();
     }
 
-    ;
 }
