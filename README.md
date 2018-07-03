@@ -37,6 +37,8 @@ http://wildfly.org/downloads/
 
 Rozpakuj do folderu: wildfly-13
 
+
+Uruchom serwer
 ```sh
 cd wildfly-13/bin
 ./standalone.sh -c standalone-full.xml
@@ -54,6 +56,8 @@ Groups: none
 ```
 
 Dodaj serwer pocztowy do serwera wildfly
+
+Skrzynka pocztowa utworzona została na serwerze Gmail, możesz z niej korzystać na potrzeby testów.
 ```sh
 cd wildfly-13/bin
 ./jboss-cli.sh
@@ -69,7 +73,6 @@ Wykonaj w CLI te 3 polecenia (CTRL+C -> CTRL+V -> Enter)
 
 ```
 
-Skrzynka pocztowa utworzona została na serwerze Gmail, możesz z niej korzystać na potrzeby testów.
 
 
 Zamknij i uruchom serwer ponownie.
@@ -83,7 +86,8 @@ Super skonfigurowałeś poprawnie serwer.
 
 
 ### Budowanie i Deploy projektu
-W projekcie pod system linux przygotowano skrypt budujący i wgrywający projekt na odpalonego wildfly z konfiguracją podaną wyżej.
+W projekcie pod system linux przygotowano skrypt budujący i wgrywający projekt na uruchomionego wildfly z konfiguracją podaną wyżej.
+
 Uruchomienie skryptu:
 ```sh
 ./deploy.sh 
@@ -112,13 +116,16 @@ Do przetestowania projektu i dokumentacji endpoint'ów Rest użyłem SWAGGER'a
 https://swagger.io/tools/swagger-ui/
 
 
+Swagger UI znajduje się pod adresem:
+
+http://localhost:8080/
 
 
 ### Zrzut z Klienta
 ![Zrzut1](resources/zrzut-klient.png)
 
 
-Aby przetestować pobieranie wszystkich pokoi, kliknij: "Getal All Rooms and booking"
+Aby przetestować pobieranie wszystkich pokoi, kliknij: "Get All Rooms and booking"
 
 Kolejno przycisk Try it Out, a następnie Execute.
 ![Zrzut1](resources/zrzut-execute.png)
