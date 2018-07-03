@@ -4,6 +4,7 @@ import org.apache.http.HttpStatus;
 import pl.whiteit.booking.light.booking.model.Booking;
 import pl.whiteit.booking.light.common.action.ExecuteBaseAction;
 import pl.whiteit.booking.light.common.exception.ValidationException;
+import pl.whiteit.booking.light.common.mail.MailService;
 import pl.whiteit.booking.light.room.dto.AddBookingRoomDto;
 import pl.whiteit.booking.light.room.service.RoomBookingService;
 
@@ -16,6 +17,8 @@ public class AddBookingRoomAction extends ExecuteBaseAction<AddBookingRoomDto,Bo
 
     @Inject
     private RoomBookingService roomBookingService;
+
+
 
 
     @Override

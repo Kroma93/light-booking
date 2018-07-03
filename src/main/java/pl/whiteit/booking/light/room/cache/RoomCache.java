@@ -11,12 +11,14 @@ import pl.whiteit.booking.light.common.data.DataResources;
 import pl.whiteit.booking.light.common.data.IdType;
 import pl.whiteit.booking.light.room.model.Room;
 
+import javax.ejb.Startup;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Objects;
 
+@Startup
 @ApplicationScoped
 @Resources(DataResources.ROOM)
 public class RoomCache extends DataCache<Room> {

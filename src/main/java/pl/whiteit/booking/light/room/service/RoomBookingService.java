@@ -2,11 +2,14 @@ package pl.whiteit.booking.light.room.service;
 
 import pl.whiteit.booking.light.booking.model.Booking;
 import pl.whiteit.booking.light.common.exception.ValidationException;
+import pl.whiteit.booking.light.common.mail.MailService;
 import pl.whiteit.booking.light.room.dto.AddBookingRoomDto;
 import pl.whiteit.booking.light.room.model.Room;
 import pl.whiteit.booking.light.room.validator.AddBookingValidator;
 
 import javax.inject.Inject;
+import javax.mail.MessagingException;
+import java.io.UnsupportedEncodingException;
 
 
 public class RoomBookingService {
@@ -16,6 +19,9 @@ public class RoomBookingService {
 
     @Inject
     private AddBookingValidator addBookingValidator;
+
+    @Inject
+    MailService mailService;
 
     public Booking bookingRoom(AddBookingRoomDto addBookingRoomDto) throws ValidationException {
         Booking booking = parseToBooking(addBookingRoomDto);

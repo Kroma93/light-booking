@@ -1,38 +1,26 @@
 [
   {
-    "name": "Test",
-    "description": "TEST OPISU"
+    "name": "Pokój Hello World",
+    "description": "Minimalistyczny pokój w którym każdy początkujący programista znajdzie coś dla siebie"
   },
   {
-    "name": "Test",
-    "description": "TEST OPISU"
+    "name": "Pokój Java",
+    "description": "Najwygodniejszy pokój w naszym hotelu, co chwile sprząta w nim przemiła i seksi sprzątaczka GC, przepiękny widok z okna na JVM"
   },
   {
-    "name": "Test",
-    "description": "TEST OPISU"
+    "name": "Pokój Python",
+    "description": "Pokój dla programistów chcących zaszaleć, można spotkać w nim węże ale też narzędzia które ogarną cały ten bajzel dookoła"
   },
   {
-    "name": "Test",
-    "description": "TEST OPISU"
+    "name": "Pokój SQL",
+    "description": "Pokój w którym wszystko ma relacje, każda rzecz jest dopasowana idealnie, harmonia i porządek"
   },
   {
-    "name": "Test",
-    "description": "TEST OPISU"
+    "name": "Pokój JavaScript",
+    "description": "Pełno w nim nowoczesnych sprzętów, znajdziesz w nim REACTA, Angulara ale i starych przyjaciół jak Jquery"
   },
   {
-    "name": "Test",
-    "description": "TEST OPISU"
-  },
-  {
-    "name": "Test",
-    "description": "TEST OPISU"
-  },
-  {
-    "name": "Test",
-    "description": "TEST OPISU"
-  },
-  {
-    "name": "Test",
-    "description": "TEST OPISU"
+    "name": "Pokój C#",
+    "description": "Idealny dla studentów, tani, przestronny wygodny"
   }
 ]

@@ -13,4 +13,5 @@ public class Booking extends BaseModel {
     public String email;
     public Room room;
 
+    public boolean isSendReminder;
 }
