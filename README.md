@@ -20,7 +20,7 @@ Klient do przetestowania aplikacji to Swagger UI.
 
 ### Instalacja
 
-Elastic News wymagania:
+Light Booking wymagania:
 - System Operacyjny zalecany Linux
 - Java 8
 - Wildfly 13
